@@ -2,18 +2,19 @@ package com.javafee.figure;
 
 public class Circle extends Figure {
 
-	private Double promien=0.0;
+	private Double radius = 0.0;
+
+	public void setRadius(Double radius) {
+		this.radius = radius;
+	}
+
 	@Override
-	public void podstawyFigura() {
-		System.out.println("Jest to ko³o, posidaj¹ce pole i obwód");}
-	
-	public void setpromien(Double promien) {
-		this.promien = promien;
+	public Double getField() {
+		return radius * radius * 3.14;
 	}
-	public void getField() {
-		System.out.println("Pole wynosi: " + (promien*promien*3.14));
-	}
-	public void getCircuit() {
-		System.out.println("Obwod wynosi: " + (promien*2*3.14));
+
+	@Override
+	public Double getCircuit() {
+		return radius * 2 * 3.14;
 	}
 }

@@ -1,18 +1,19 @@
 package com.javafee.figure;
 
 public class Square extends Figure {
-	private Double a=0.0;
+	private Double side = 0.0;
+
+	public void setSide(Double side) {
+		this.side = side;
+	}
+
 	@Override
-	public void podstawyFigura() {
-		System.out.println("Jest to kwadrat, posidaj¹cy pole i obwód");}
-	
-	public void seta(Double a) {
-		this.a = a;
+	public Double getField() {
+		return side * side;
 	}
-	public void getField() {
-		System.out.println("Pole wynosi: " + (a*a));
-	}
-	public void getCircuit() {
-		System.out.println("Obwod wynosi: " + (4*a));
+
+	@Override
+	public Double getCircuit() {
+		return 4 * side;
 	}
 }

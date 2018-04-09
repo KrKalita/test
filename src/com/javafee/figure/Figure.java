@@ -1,7 +1,11 @@
 package com.javafee.figure;
 
 public class Figure {
-	public void podstawyFigura() {
-		System.out.println("Jest to figura, posidaj¹ca pole i obwód");
+	public Double getField() {
+		return 0.0;
+	}
+	
+	public Double getCircuit() {
+		return 0.0;
 	}
 }

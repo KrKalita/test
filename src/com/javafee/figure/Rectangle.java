@@ -1,22 +1,24 @@
 package com.javafee.figure;
 
 public class Rectangle extends Figure {
-	private Double a=0.0;
-	private Double b=0.0;
+	private Double shortSide = 0.0;
+	private Double longSide = 0.0;
+
+	public void setShortSide(Double shortSide) {
+		this.shortSide = shortSide;
+	}
+
+	public void setLongSide(Double longSide) {
+		this.longSide = longSide;
+	}
+
 	@Override
-	public void podstawyFigura() {
-		System.out.println("Jest to prostok¹t, posidaj¹cy pole i obwód");}
-	
-	public void seta(Double a) {
-		this.a = a;
+	public Double getField() {
+		return shortSide * longSide;
 	}
-	public void setb(Double b) {
-		this.b = b;
-	}
-	public void getField() {
-		System.out.println("Pole wynosi: " + (a*b));
-	}
-	public void getCircuit() {
-		System.out.println("Obwod wynosi: " + (2*a+2*b));
+
+	@Override
+	public Double getCircuit() {
+		return 2 * shortSide + 2 * longSide;
 	}
 }

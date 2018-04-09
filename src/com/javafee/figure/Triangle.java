@@ -1,30 +1,34 @@
 package com.javafee.figure;
 
-public class Triangle extends Figure{
-	private Double a=0.0;
-	private Double b=0.0;
-	private Double c=0.0;
-	private Double h=0.0;
+public class Triangle extends Figure {
+	private Double sideA = 2.0;
+	private Double sideB = 0.0;
+	private Double sideC = 0.0;
+	private Double height = 5.0;
+
+	public void setShortSide(Double sideA) {
+		this.sideA = sideA;
+	}
+
+	public void seth(Double height) {
+		this.height = height;
+	}
+
+	public void setLongSide(Double sideB) {
+		this.sideB = sideB;
+	}
+
+	public void setc(Double sideC) {
+		this.sideC = sideC;
+	}
+
 	@Override
-	public void podstawyFigura() {
-		System.out.println("Jest to trójk¹t, posidaj¹cy pole i obwód");}
-	
-	public void seta(Double a) {
-		this.a = a;
+	public Double getField() {
+		return sideA * height / 2;
 	}
-	public void seth(Double h) {
-		this.h = h;
-	}
-	public void setb(Double b) {
-		this.b = b;
-	}
-	public void setc(Double c) {
-		this.c = c;
-	}
-	public void getField() {
-		System.out.println("Pole wynosi: " + (a*h/2));
-	}
-	public void getCircuit() {
-		System.out.println("Obwod wynosi: " + (a+b+c));
+
+	@Override
+	public Double getCircuit() {
+		return sideA + sideB + sideC;
 	}
 }
