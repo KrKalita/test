@@ -6,19 +6,19 @@ public class Triangle extends Figure {
 	private Double sideC = 0.0;
 	private Double height = 5.0;
 
-	public void setShortSide(Double sideA) {
+	public void setSideA(Double sideA) {
 		this.sideA = sideA;
 	}
 
-	public void seth(Double height) {
+	public void setHeight(Double height) {
 		this.height = height;
 	}
 
-	public void setLongSide(Double sideB) {
+	public void setSideB(Double sideB) {
 		this.sideB = sideB;
 	}
 
-	public void setc(Double sideC) {
+	public void setSideC(Double sideC) {
 		this.sideC = sideC;
 	}
 
